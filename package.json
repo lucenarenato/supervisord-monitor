@@ -5,10 +5,10 @@
   "author": "Martin Lazarov",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mlazarov/supervisord-monitor"
+    "url": "https://github.com/lucenarenato/supervisord-monitor"
   },
   "bugs": {
-    "url": "https://github.com/mlazarov/supervisord-monitor/issues"
+    "url": "https://github.com/lucenarenato/supervisord-monitor/issues"
   },
   "license": "MIT"
 }

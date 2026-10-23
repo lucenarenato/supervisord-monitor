@@ -97,7 +97,7 @@
 						if(!is_array($item)){
 								// Not having array means that we have error.
 								echo '<tr><td colspan="4">'.$item.'</td></tr>';
-								echo '<tr><td colspan="4">For Troubleshooting <a href="https://github.com/mlazarov/supervisord-monitor#troubleshooting" target="_blank">check this guide</a></td></tr>';
+								echo '<tr><td colspan="4">For Troubleshooting <a href="https://github.com/lucenarenato/supervisord-monitor#troubleshooting" target="_blank">check this guide</a></td></tr>';
 								continue;
 						}
 
@@ -172,7 +172,7 @@
     </div> <!-- /container -->
 	
 	<div class="footer">
-		<p>Powered by <a href="https://github.com/mlazarov/supervisord-monitor" target="_blank">Supervisord Monitor</a> | Page rendered in <strong>{elapsed_time}</strong> seconds</p>
+		<p>Powered by <a href="https://github.com/lucenarenato/supervisord-monitor" target="_blank">Supervisord Monitor</a> | Page rendered in <strong>{elapsed_time}</strong> seconds</p>
 	</div>
 	<script>
 	function show_content($param){

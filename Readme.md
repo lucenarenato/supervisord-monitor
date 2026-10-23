@@ -1,6 +1,6 @@
 # Supervisord Multi Server Monitoring Tool
 
-![Screenshot](https://raw.github.com/mlazarov/supervisord-monitor/master/supervisord-monitor.png)
+![Screenshot](https://raw.github.com/lucenarenato/supervisord-monitor/master/supervisord-monitor.png)
 
 ## Features
 
@@ -16,7 +16,7 @@
 
 1.Clone supervisord-monitor to your vhost/webroot:
 ```
-git clone https://github.com/mlazarov/supervisord-monitor.git
+git clone https://github.com/lucenarenato/supervisord-monitor.git
 ```
 
 2.Copy application/config/supervisor.php.example to application/config/supervisor.php
@@ -105,7 +105,7 @@ To test this you can add `AllowOverride All` config to the httpd.conf (if you ar
 ## Thanks to ##
 - [stvnwrgs](https://github.com/stvnwrgs) - added authentication functionality to supervisord monitor
 - [rk295](https://github.com/rk295) - added handling of non authenticated servers
-- [All Contributors](https://github.com/mlazarov/supervisord-monitor/contributors) 
+- [All Contributors](https://github.com/lucenarenato/supervisord-monitor/contributors) 
 
 ## Who uses Supervisord Monitor? ##
 
