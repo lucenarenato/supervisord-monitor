@@ -1,59 +1,306 @@
-body{
+/* ------------------------------------------------------------------
+ * supervisord-monitor - ajustes sobre o Bootstrap 3.3.7
+ * ------------------------------------------------------------------ */
+
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+body {
 	cursor: default;
-}
-.popover {
-	max-width:	450px;
-}
-.footer{ text-align:center;}
-
-#refresh{
-	color:		white;
-	min-width:	34px;
-	text-align:	center;
-	display:block;
-	float: right;
+	padding-top: 70px;
+	padding-bottom: 70px;
+	background-color: #f2f5f8;
+	color: #333;
 }
 
-.actions a:not(:last-child) {
-	margin-right: 5px;
+a {
+	color: #2f6fb3;
+}
+a:hover,
+a:focus {
+	color: #1d4d80;
 }
 
-.actions {
+/* ------------------------------ navbar ---------------------------- */
+
+.navbar-inverse {
+	background-color: #22303f;
+	border-color: #1a2531;
+}
+.navbar-inverse .navbar-brand {
+	color: #fff;
+	font-weight: 600;
+	letter-spacing: .01em;
+}
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-brand:focus {
+	color: #fff;
+}
+.navbar-inverse .navbar-brand .glyphicon {
+	margin-right: 6px;
+	color: #6fb3e8;
+}
+.navbar-inverse .navbar-nav > li > a {
+	color: #c3cedb;
+}
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+	color: #fff;
+	background-color: #2b3b4d;
+}
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+	color: #fff;
+	background-color: #16202b;
+}
+.navbar-inverse .navbar-nav > li > a .glyphicon {
+	margin-right: 3px;
+}
+.navbar-inverse .badge {
+	background-color: #0e1720;
+	color: #9fd0f2;
+}
+#refresh {
+	display: inline-block;
+	min-width: 26px;
+	padding: 2px 6px;
+	font-size: 11px;
+	font-weight: 600;
+	text-align: center;
+}
+
+/* ------------------------------ resumo ---------------------------- */
+
+.stats-row {
+	margin-bottom: 15px;
+}
+.stat-box {
+	background-color: #fff;
+	border: 1px solid #e1e7ee;
+	border-left: 4px solid #8a97a8;
+	border-radius: 4px;
+	padding: 10px 14px;
+	margin-bottom: 15px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .04);
+}
+.stat-value {
+	display: block;
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 1.1;
+	color: #2b3a4a;
+}
+.stat-label {
+	display: block;
+	margin-top: 2px;
+	font-size: 11px;
+	text-transform: uppercase;
+	letter-spacing: .06em;
+	color: #8a97a8;
+}
+.stat-success { border-left-color: #5cb85c; }
+.stat-success .stat-value { color: #3c8b3c; }
+.stat-default { border-left-color: #9aa5b1; }
+.stat-warning { border-left-color: #f0ad4e; }
+.stat-warning .stat-value { color: #b8770f; }
+.stat-danger  { border-left-color: #d9534f; }
+.stat-danger .stat-value { color: #b03b38; }
+
+/* ------------------------------ paineis --------------------------- */
+
+.server-panel {
+	border-radius: 4px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, .07);
+	overflow: hidden;
+}
+.server-panel .panel-heading {
+	padding: 8px 12px;
+}
+.server-panel .panel-title {
+	font-size: 15px;
+	line-height: 1.5;
+}
+.server-panel .panel-title .glyphicon {
+	margin-right: 3px;
+	opacity: .75;
+}
+.server-panel .panel-title a {
+	color: inherit;
+	font-weight: 600;
+	text-decoration: none;
+}
+.server-panel .panel-title a:hover {
+	text-decoration: underline;
+}
+.server-panel .panel-title .badge {
+	background-color: rgba(0, 0, 0, .12);
+	color: inherit;
+	font-size: 11px;
+	font-weight: 600;
+	vertical-align: 2px;
+}
+.server-panel .panel-title .server-host,
+.server-panel .panel-title .server-version {
+	margin-left: 8px;
+	font-size: 12px;
+	color: inherit;
+	opacity: .65;
+}
+.server-btns .btn {
+	margin-left: 4px;
+}
+
+/* ------------------------------ tabela ---------------------------- */
+
+.server-table {
+	margin-bottom: 0;
+	font-size: 13px;
+}
+.server-table > thead > tr > th {
+	background-color: #f7f9fb;
+	border-bottom: 1px solid #e1e7ee;
+	padding: 6px 10px;
+	font-size: 10px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: .07em;
+	color: #8a97a8;
+	white-space: nowrap;
+}
+.server-table > tbody > tr > td {
+	padding: 6px 10px;
+	vertical-align: middle;
+	border-top-color: #eef2f6;
+}
+.server-table > tbody > tr > td.hint {
+	font-size: 12px;
+	color: #8a97a8;
+}
+.server-table .process-name {
+	font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+	font-size: 12px;
+	word-break: break-all;
+}
+.server-table .label {
+	display: inline-block;
+	min-width: 66px;
+	padding: .3em .6em;
+	font-size: 10px;
+	font-weight: 600;
+	letter-spacing: .04em;
+}
+.server-table .status-col {
+	width: 1%;
+	white-space: nowrap;
+}
+.server-table .uptime-col {
+	width: 1%;
+	white-space: nowrap;
+	font-size: 12px;
+	color: #8a97a8;
+}
+.server-table .actions-col {
+	width: 1%;
+	white-space: nowrap;
+}
+.server-table .actions {
 	display: flex;
+	justify-content: flex-end;
+	opacity: .55;
+	transition: opacity .15s ease-in-out;
+}
+.server-table > tbody > tr:hover .actions,
+.server-table > tbody > tr:focus-within .actions {
+	opacity: 1;
+}
+.server-table .actions a:not(:last-child) {
+	margin-right: 4px;
+}
+.server-table .actions .btn {
+	padding: 1px 6px;
+	font-size: 11px;
 }
 
-@media (min-width: 1800px){
-	.container {
-		width: 1700px;
-	}
-	.span4 {
-		width: 545px;
-	}	
+/* ------------------------------ popover --------------------------- */
+
+.popover {
+	max-width: 520px;
 }
-@media (min-width: 980px){
+.popover-log {
+	max-height: 260px;
+	overflow: auto;
+	padding: 8px 10px;
+	margin-bottom: 10px;
+	background-color: #f7f9fb;
+	border: 1px solid #e1e7ee;
+	border-radius: 3px;
+	font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+	font-size: 11px;
+	line-height: 1.5;
+	color: #445;
+}
+.popover-actions {
+	margin-top: 4px;
+}
+
+/* ------------------------------ alertas --------------------------- */
+
+.alert {
+	padding: 10px 15px;
+	margin-bottom: 15px;
+}
+.alert .pull-right {
+	text-decoration: none;
+	font-weight: 600;
+}
+
+/* ------------------------------ rodape ---------------------------- */
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 48px;
+	background-color: #fff;
+	border-top: 1px solid #e1e7ee;
+}
+.footer p {
+	margin: 15px 0 0;
+	font-size: 12px;
+	text-align: center;
+}
+.footer a {
+	color: #6b7a8c;
+}
+
+/* ------------------------------ responsivo ------------------------ */
+
+@media (max-width: 767px) {
 	body {
 		padding-top: 60px;
 	}
-}
-
-.icon-red {
-  background-image: url("../img/glyphicons-halflings-red.png") !important;
-}
-.icon-purple {
-  background-image: url("../img/glyphicons-halflings-purple.png") !important;
-}
-.icon-blue {
-  background-image: url("../img/glyphicons-halflings-blue.png") !important;
-}
-.icon-lightblue {
-  background-image: url("../img/glyphicons-halflings-lightblue.png") !important;
-}
-.icon-green {
-  background-image: url("../img/glyphicons-halflings-green.png") !important;
-}
-.icon-yellow {
-  background-image: url("../img/glyphicons-halflings-yellow.png") !important;
-}
-.icon-orange {
-  background-image: url("../img/glyphicons-halflings-orange.png") !important;
+	.server-panel .panel-heading {
+		text-align: left;
+	}
+	.server-btns {
+		float: none !important;
+		margin-bottom: 6px;
+	}
+	.server-btns .btn {
+		margin-left: 0;
+		margin-right: 4px;
+	}
+	.server-table .actions {
+		opacity: 1;
+	}
+	.footer {
+		position: static;
+		height: auto;
+	}
+	.footer p {
+		margin: 12px 0;
+	}
 }
