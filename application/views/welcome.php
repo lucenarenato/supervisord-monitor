@@ -42,7 +42,7 @@
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="<?php echo site_url();?>" title="Auto refresh"><span class="glyphicon glyphicon-refresh"></span> <span class="badge" id="refresh"><?php echo $this->config->item('refresh');?></span></a></li>
-					<li><a href="mailto:martin@lazarov.bg"><span class="glyphicon glyphicon-envelope"></span> Contact</a></li>
+					<li><a href="mailto:cpdrenato@gmail.comphicon glyphicon-envelope"></span> Contact</a></li>
 				</ul>
 			</div>
 		</div>

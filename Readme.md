@@ -12,6 +12,11 @@
 * Mute sound alerts (after some time auto resume)
 * Monitor process uptime status
 
+## Requirements
+
+* PHP 8.2
+* Bootstrap 3.3.7
+
 ## Install
 
 1.Clone supervisord-monitor to your vhost/webroot:
@@ -112,13 +117,13 @@ To test this you can add `AllowOverride All` config to the httpd.conf (if you ar
 [EasyWpress - wordpress hosting company](http://easywpress.com)
 
 
-If you've used Supervisord Monitor Tool send me email to martin@lazarov.bg to add your project/company to this list.
+If you've used Supervisord Monitor Tool send me email to cpdrenato@gmail.com t/company to this list.
 
 ## License
 
 MIT License
 
-Copyright (C) 2013 Martin Lazarov
+Copyright (C) 2013 Renato Lucena
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

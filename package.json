@@ -2,7 +2,7 @@
   "name": "supervisord-monitor",
   "version": "1.0.0",
   "description": "Supervisord Multi Server Monitoring Tool",
-  "author": "Martin Lazarov",
+  "author": "Renato Lucena",
   "repository": {
     "type": "git",
     "url": "https://github.com/lucenarenato/supervisord-monitor"
