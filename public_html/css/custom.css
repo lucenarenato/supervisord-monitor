@@ -112,12 +112,45 @@ a:focus {
 /* ------------------------------ paineis --------------------------- */
 
 .server-panel {
+	background-color: #fff;
+	border: 1px solid #d9e1ea;
+	border-left: 5px solid #9aa5b1;
 	border-radius: 4px;
-	box-shadow: 0 1px 3px rgba(0, 0, 0, .07);
+	box-shadow: 0 1px 3px rgba(23, 33, 45, .09);
 	overflow: hidden;
 }
+.server-panel.panel-success,
+.server-panel.panel-info,
+.server-panel.panel-warning,
+.server-panel.panel-danger {
+	border-color: #d9e1ea;
+}
+.server-panel.panel-success { border-left-color: #55a55a; }
+.server-panel.panel-info    { border-left-color: #46b0cd; }
+.server-panel.panel-warning { border-left-color: #eda44c; }
+.server-panel.panel-danger  { border-left-color: #d9534f; }
+
 .server-panel .panel-heading {
 	padding: 8px 12px;
+	color: #fff;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+	border-bottom: 0;
+}
+.server-panel.panel-success > .panel-heading {
+	background-color: #55a55a;
+	border-color: #4a9250;
+}
+.server-panel.panel-info > .panel-heading {
+	background-color: #46b0cd;
+	border-color: #3fa2bc;
+}
+.server-panel.panel-warning > .panel-heading {
+	background-color: #eda44c;
+	border-color: #d5903f;
+}
+.server-panel.panel-danger > .panel-heading {
+	background-color: #d9534f;
+	border-color: #c0433f;
 }
 .server-panel .panel-title {
 	font-size: 15px;
@@ -125,19 +158,19 @@ a:focus {
 }
 .server-panel .panel-title .glyphicon {
 	margin-right: 3px;
-	opacity: .75;
+	opacity: .85;
 }
 .server-panel .panel-title a {
-	color: inherit;
-	font-weight: 600;
+	color: #fff;
+	font-weight: 700;
 	text-decoration: none;
 }
 .server-panel .panel-title a:hover {
 	text-decoration: underline;
 }
 .server-panel .panel-title .badge {
-	background-color: rgba(0, 0, 0, .12);
-	color: inherit;
+	background-color: rgba(255, 255, 255, .28);
+	color: #fff;
 	font-size: 11px;
 	font-weight: 600;
 	vertical-align: 2px;
@@ -146,8 +179,8 @@ a:focus {
 .server-panel .panel-title .server-version {
 	margin-left: 8px;
 	font-size: 12px;
-	color: inherit;
-	opacity: .65;
+	color: #fff;
+	opacity: .8;
 }
 .server-btns .btn {
 	margin-left: 4px;
@@ -160,20 +193,23 @@ a:focus {
 	font-size: 13px;
 }
 .server-table > thead > tr > th {
-	background-color: #f7f9fb;
-	border-bottom: 1px solid #e1e7ee;
+	background-color: #f0f3f7;
+	border-bottom: 1px solid #d9e1ea;
 	padding: 6px 10px;
 	font-size: 10px;
 	font-weight: 600;
 	text-transform: uppercase;
 	letter-spacing: .07em;
-	color: #8a97a8;
+	color: #7d8b9d;
 	white-space: nowrap;
 }
 .server-table > tbody > tr > td {
 	padding: 6px 10px;
 	vertical-align: middle;
-	border-top-color: #eef2f6;
+	border-top-color: #e6ecf2;
+}
+.server-table > tbody > tr:last-child td {
+	border-bottom: 1px solid #e6ecf2;
 }
 .server-table > tbody > tr > td.hint {
 	font-size: 12px;
