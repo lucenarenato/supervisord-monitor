@@ -4,10 +4,18 @@
 	<meta charset="utf-8">
 	<title>Supervisord Monitoring</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link type="text/css" rel="stylesheet" href="<?php echo base_url('/css/bootstrap.min.css');?>"/>
-	<link type="text/css" rel="stylesheet" href="<?php echo base_url('/css/custom.css');?>"/>
-<script type="text/javascript" src="<?php echo base_url('/js/jquery-1.10.1.min.js');?>"></script>
-<script type="text/javascript" src="<?php echo base_url('/js/bootstrap.min.js');?>"></script>
+	<?php
+	// Versiona os assets pelo mtime: o nginx entrega css/js com cache de 10 anos
+	// (expires max), entao a URL precisa mudar quando o arquivo muda.
+	$asset = function($path){
+		$mtime = @filemtime(FCPATH.$path);
+		return base_url($path).(!$mtime ? '' : '?v='.$mtime);
+	};
+	?>
+	<link type="text/css" rel="stylesheet" href="<?php echo $asset('/css/bootstrap.min.css');?>"/>
+	<link type="text/css" rel="stylesheet" href="<?php echo $asset('/css/custom.css');?>"/>
+<script type="text/javascript" src="<?php echo $asset('/js/jquery-1.10.1.min.js');?>"></script>
+<script type="text/javascript" src="<?php echo $asset('/js/bootstrap.min.js');?>"></script>
 	<noscript>
 	<?php
 	if($this->config->item('refresh')){ ?>
